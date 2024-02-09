@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Intro component with sign up form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <main role="main">
+      <section class="intro-component">
+        <div class="intro-wrapper">
+          <article class="intro-left">
+            <h1 class="left-title">Learn to code by watching others</h1>
+            <p class="left-paragraph">
+              See how experienced developers solve problem in real-time.
+              Watching scripted tutorials is great, but understanding how
+              developers think is invaluable.
+            </p>
+          </article>
+          <aside class="intro-right">
+            <div class="trial-bar">
+              <p class="trial-text">
+                Try it free 7 days then $20/mo. thereafter
+              </p>
+            </div>
+            <form action="" id="signup_form" class="signup_form">
+              <div class="input-wrapper">
+                <img
+                  class="error-icon first-name-err-icon hide-element"
+                  src="./images/icon-error.svg"
+                  alt="Error icon"
+                />
+                <input
+                  class="form-input"
+                  type="text"
+                  placeholder="First Name"
+                  id="first-name"
+                  name="name"
+                />
+                <p class="error_message first-name-err hide-element">
+                  First Name cannot be empty
+                </p>
+              </div>
+              <div class="input-wrapper">
+                <img
+                  class="error-icon last-name-err-icon hide-element"
+                  src="./images/icon-error.svg"
+                  alt="Error icon"
+                />
+                <input
+                  class="form-input"
+                  type="text"
+                  placeholder="last-Name"
+                  id="last-name"
+                  name="last_name"
+                />
+                <p class="error_message last-name-err hide-element">
+                  Last Name cannot be empty
+                </p>
+              </div>
+              <div class="input-wrapper">
+                <img
+                  class="error-icon email-err-icon hide-element"
+                  src="./images/icon-error.svg"
+                  alt="Error icon"
+                />
+                <input
+                  class="form-input"
+                  type="email"
+                  placeholder="Email Address"
+                  id="email-address"
+                  name="email"
+                />
+                <p class="error_message wrong-email-err hide-element">
+                  Email cannot be empty
+                </p>
+                <p class="error_message email-err hide-element">
+                  Looks like this is not an email
+                </p>
+              </div>
+              <div class="input-wrapper">
+                <img
+                  class="error-icon password-err-icon hide-element"
+                  src="./images/icon-error.svg"
+                  alt="Error icon"
+                />
+                <input
+                  class="form-input"
+                  type="password"
+                  placeholder="Password"
+                  id="password"
+                  name="password"
+                />
+                <p class="error_message password-err hide-element">
+                  Password cannot be empty
+                </p>
+              </div>
+              <button class="claim-btn" type="submit">
+                Claim your free trial
+              </button>
+              <p class="agreements-text">
+                By clicking the button, you are agreeting to our
+                <span class="term-services">terms and services</span>
+              </p>
+            </form>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,224 @@
+:root {
+  /* Primary Color */
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  /* Accent Color */
+  --blue: hsl(248, 32%, 49%);
+  /* Neutral Color */
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-size: 16px;
+}
+
+.intro-component {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 16.67px);
+  background-image: url(./images/bg-intro-desktop.png);
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px hsl(0deg 74% 41% / 60%);
+}
+
+.intro-wrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-content: center;
+  margin-block: 48px;
+  /* gap: 20px; */
+}
+
+.intro-left {
+  grid-column: 2 / span 2;
+  grid-row: 2 / 3;
+}
+
+.intro-right {
+  grid-column: 4 / span 2;
+  grid-row: 2 / 3;
+}
+
+.intro-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 3rem;
+}
+
+.left-title {
+  color: #fff;
+  font-size: 3rem;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin-bottom: 24px;
+}
+
+.left-paragraph {
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.intro-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.trial-bar {
+  background-color: var(--blue);
+  padding: 1rem 2rem;
+  border-radius: 0.7rem;
+  box-shadow: 0 7px 8px rgba(0, 0, 0, 0.3);
+  margin-bottom: 24px;
+}
+
+.trial-text {
+  color: #fff;
+  text-align: center;
+}
+
+.signup_form {
+  background-color: #fff;
+  padding: 1.6rem 1.8rem;
+  border-radius: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  box-shadow: 0 7px 8px rgba(0, 0, 0, 0.2);
+}
+
+.input-wrapper {
+  width: 100%;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-input {
+  all: unset;
+  border: 1px solid rgba(145, 136, 136, 0.4);
+  padding-left: 1.2rem;
+  border-radius: 0.3rem;
+  height: 50px;
+  width: calc(100% - 1.3rem);
+  font-weight: 600;
+}
+
+.form-input:focus {
+  border: 2px solid var(--grayish-blue);
+}
+
+.claim-btn {
+  all: unset;
+  height: 50px;
+  cursor: pointer;
+  background-color: var(--green);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  box-shadow: 0 7px 8px rgba(0, 0, 0, 0.1);
+  margin-block: 24px;
+}
+
+.claim-btn:hover {
+  background-color: hsl(154, 59%, 56%);
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.2);
+}
+
+.agreements-text {
+  text-align: center;
+  font-size: 0.77rem;
+  color: var(--grayish-blue);
+}
+
+.term-services {
+  color: var(--red);
+}
+
+.error_message {
+  text-align: end;
+  font-size: 0.8rem;
+  color: var(--dark-blue);
+}
+
+.red-border {
+  border: 2px solid var(--red);
+}
+
+.form-input .red-border::placeholder {
+  color: var(--red);
+}
+
+.error-icon {
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  top: 17px;
+  right: 10px;
+}
+
+.hide-element {
+  display: none !important;
+}
+
+@media only screen and (max-width: 575px) {
+  .intro-wrapper {
+    grid-template-columns: 1fr; /* Change to a single column layout */
+    grid-template-rows: repeat(2, 1fr);
+    margin: 3rem 1.5rem; /* Adjust margin */
+  }
+
+  .intro-left,
+  .intro-right {
+    grid-column: auto; /* Reset grid column */
+    grid-row: auto; /* Reset grid row */
+  }
+
+  .intro-left,
+  .intro-right {
+    padding: 0; /* Remove padding */
+  }
+
+  .intro-left {
+    padding: 2rem;
+  }
+
+  .left-title {
+    font-size: 2rem; /* Decrease font size */
+    margin-bottom: 16px; /* Adjust margin */
+    text-align: center; /* Center align text */
+  }
+
+  .left-paragraph {
+    font-size: 0.9rem; /* Decrease font size */
+    text-align: center; /* Center align text */
+  }
+
+  .trial-bar {
+    padding: 1rem; /* Adjust padding */
+    margin-bottom: 16px; /* Adjust margin */
+  }
+
+  .trial-text {
+    font-size: 0.9rem; /* Decrease font size */
+  }
+
+  .signup-form {
+    padding: 1rem;
+  }
+}
